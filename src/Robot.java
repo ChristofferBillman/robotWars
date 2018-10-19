@@ -10,6 +10,6 @@ public class Robot {
     }
     // boolean x/y: true = positivt x/y, false = negativt x/y
     private void move(boolean x, boolean y) {
-        
+
     }
 }
