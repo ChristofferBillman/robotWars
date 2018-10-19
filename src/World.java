@@ -6,4 +6,10 @@ public class World {
     public World() {
 
     }
+    public void startSim(int ticks) {
+
+    }
+    public void stopSim() {
+
+    }
 }
