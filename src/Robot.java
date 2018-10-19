@@ -5,11 +5,40 @@ public class Robot {
     int y;
 
     // Konstruktor
-    public Robot() {
+    public Robot(boolean setLightLover, int setFuelLevel, int setX, int setY) {
+        // Setting up necessary variables.
+
+        lightLover = setLightLover;
+        setFuelLevel(setFuelLevel);
+        this.x = setX;
+        this.y = setY;
+    }
+
+    private void behaviour() {
 
     }
-    // boolean x/y: true = positivt x/y, false = negativt x/y
-    private void move(boolean x, boolean y) {
 
+    private void move(int moveX, int moveY) {
+        x = getX() + moveX;
+        y = getY() + moveY;
+    }
+    private int getX() {
+        return x;
+    }
+
+    private int getY() {
+        return y;
+    }
+
+    private int getFuelLevel() {
+        return fuelLevel;
+    }
+
+    private void setFuelLevel(int newFuelLevel) {
+        this.fuelLevel = newFuelLevel;
+    }
+
+    private boolean getLightLover() {
+        return lightLover;
     }
 }
