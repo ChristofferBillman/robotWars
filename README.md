@@ -1,33 +1,33 @@
 # robotWars
 En simulering där olika robotar åker runt i en värld.
 
-World
+## World
 int width, height
 Block[] world
 
-Konstruktor - En instans av world ska skapas direkt. Generate metoden ska köras i konstruktorn.
+### Konstruktor - En instans av world ska skapas direkt. Generate metoden ska köras i konstruktorn.
 World()
 
 Denna metoden skall skapa block-arrayen, vilket är hela världen. Lamp och fuelstation amount är mängden av given sak i världen.
 generate(int lampAmount, int fuelStationAmount, worldSize): block[] world
 
-Block
+## Block
 double distanceToLight
 double distanceToFuel
 boolean isFuel
 boolean isLamp
 //boolean isWall
 
-Konstruktor -
+### Konstruktor
 Block()
 
-Robot
+## Robot
 boolean lightLover
 int fuelLevel
 int x
 int y
 
-Konstruktor -
+### Konstruktor
 Robot()
 
 metoden skall flytta på roboten.
@@ -51,4 +51,6 @@ A.
 V.ILL
 
 A.VLIDA
+
+
 
