@@ -4,8 +4,13 @@ public class World {
     Block[] world;
 
     public World() {
+        generate();
+    }
+
+    private Block[] generate(int lampAmount, int fuelStationAmount, int worldSize) {
 
     }
+
     public void startSim(int ticks) {
 
     }

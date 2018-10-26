@@ -13,8 +13,8 @@ public class Robot {
         this.x = setX;
         this.y = setY;
     }
-
-    private void behaviour() {
+    // The behaviour of the robot is here. Is intended to run every tick.
+    public void behaviour() {
 
     }
 
