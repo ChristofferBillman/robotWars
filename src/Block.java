@@ -1,15 +1,21 @@
 public class Block {
 
-    int distanceToLight;
-    int distanceToFuel;
-
+    //Block types
     boolean isFuel;
     boolean isLamp;
 
+    //Distance values
+    int disToFuel;
+    int disToLight;
 
     //Constructor
-    public  Block() {
-
+    public Block() {
+        isFuel = false;
+        isLamp = false;
     }
-    
+
+    public Block(boolean setIsFuel, boolean setIsLamp) {
+        isFuel = setIsFuel;
+        isLamp = setIsLamp;
+    }
 }
