@@ -1,8 +1,8 @@
 public class Robot {
-    boolean lightLover;
-    int fuelLevel = 0;
-    int x;
-    int y;
+    private boolean lightLover;
+    private int fuelLevel = 0;
+    private int x;
+    private int y;
 
     // Konstruktor
     public Robot(boolean setLightLover, int setFuelLevel, int setX, int setY) {
@@ -14,20 +14,26 @@ public class Robot {
         this.y = setY;
     }
     // The behaviour of the robot is here. Is intended to run every tick.
-    public void behaviour() {
+    public void behaviour(World world, Block[] w) {
+        int robotIndex = world.coordsToIndex(this.x,this.y);
+
+        if (this.fuelLevel <= world.world[robotIndex].getDisToLight()) {
+
+        } else {
+
+        }
 
     }
-
     private void move(int moveX, int moveY) {
-        x = getX() + moveX;
-        y = getY() + moveY;
+        this.x = getX() + moveX;
+        this.y = getY() + moveY;
     }
     private int getX() {
-        return x;
+        return this.x;
     }
 
     private int getY() {
-        return y;
+        return this.y;
     }
 
     private int getFuelLevel() {
@@ -39,6 +45,6 @@ public class Robot {
     }
 
     private boolean getLightLover() {
-        return lightLover;
+        return this.lightLover;
     }
 }
