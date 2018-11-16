@@ -4,7 +4,7 @@ public class Robot {
     private int x;
     private int y;
 
-    // Konstruktor
+    // Constructor
     public Robot(boolean setLightLover, int setFuelLevel, int setX, int setY) {
         // Setting up necessary variables.
 
@@ -18,7 +18,7 @@ public class Robot {
         int robotIndex = world.coordsToIndex(this.x,this.y);
 
         if (this.fuelLevel <= world.world[robotIndex].getDisToLight()) {
-
+            move(1,1);
         } else {
 
         }

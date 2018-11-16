@@ -1,3 +1,4 @@
+import com.sun.xml.internal.bind.v2.TODO;
 import java.awt.*;
 
 public class World {
@@ -32,6 +33,7 @@ public class World {
         shuffleArray(w);
         return w;
     }
+    // TODO: Make populateWorld method. Creates said instances of the robot class.
 
     private void shuffleArray(Block[] arr) {
         int m = arr.length;
