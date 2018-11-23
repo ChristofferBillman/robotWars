@@ -38,10 +38,10 @@ public class World {
     }
     public Robot[] populateWorld() {
         Robot[] robotArr = new Robot[robotAmount];
-        for(int i = 0; i <= robotAmount; i++) {
-            robotArr[i] = new Robot();
-            return robotArr;
+        for(int i = 0; i < robotAmount; i++) {
+            robotArr[i] = new Robot(true,20, i,i);
         }
+        return robotArr;
     }
 
     private void shuffleArray(Block[] arr) {
