@@ -35,7 +35,7 @@ public class Robot {
             if(lightLover) {
                 light = Math.max(lightLevelAt[0], Math.max(lightLevelAt[1], Math.max(lightLevelAt[2], lightLevelAt[3])));
             } else {
-                light = Math.min(lightLevelAt[0], Math.max(lightLevelAt[1], Math.max(lightLevelAt[2], lightLevelAt[3])));
+                light = Math.min(lightLevelAt[0], Math.min(lightLevelAt[1], Math.min(lightLevelAt[2], lightLevelAt[3])));
             }
 
             for(int i = 0; i <= 3; i++) {
