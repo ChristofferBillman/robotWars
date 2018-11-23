@@ -8,9 +8,14 @@ public class Main {
 
         // Tick
         boolean running = true;
+        Robot[] robotArr = world.populateWorld();
+
         while(running) {
             try {
                 // Insert code to run every tick.
+                for(int i = 0; i < world.getRobotAmount(); i++) {
+                    robotArr[i].behaviour(world);
+                }
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -19,15 +24,15 @@ public class Main {
     }
 
     // Method returns an array with all of the fuelStations/lamps coordinates (index) in the world.
-    public static int[] indexLightorFuelStations(World world, boolean fuel) {
-        int[] fuelStations = new int[world.fuelStationAmount];
-        int[] lamps = new int[world.lampAmount];
-        int insertions = 0;
-        if (fuel) {
-            for(int i = 0;i < world.world.length; i++) {
-                if (world.world[i].isFuel()) {
-                    fuelStations[insertions] = i;
-                    insertions++;
+                    public static int[] indexLightorFuelStations(World world, boolean fuel) {
+                        int[] fuelStations = new int[world.fuelStationAmount];
+                        int[] lamps = new int[world.lampAmount];
+                        int insertions = 0;
+                        if (fuel) {
+                            for(int i = 0;i < world.world.length; i++) {
+                                if (world.world[i].isFuel()) {
+                                    fuelStations[insertions] = i;
+                                    insertions++;
                 }
             }
             return fuelStations;

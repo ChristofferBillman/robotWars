@@ -14,11 +14,11 @@ public class Robot {
         this.y = setY;
     }
     // The behaviour of the robot is here. Is intended to run every tick.
-    public void behaviour(World world, Block[] w) {
+    public void behaviour(World world) {
         int robotIndex = world.coordsToIndex(this.x,this.y);
 
         if (this.fuelLevel <= world.world[robotIndex].getDisToLight()) {
-            move(1,1);
+
         } else {
 
         }
@@ -28,23 +28,23 @@ public class Robot {
         this.x = getX() + moveX;
         this.y = getY() + moveY;
     }
-    private int getX() {
+    public int getX() {
         return this.x;
     }
 
-    private int getY() {
+    public int getY() {
         return this.y;
     }
 
-    private int getFuelLevel() {
+    public int getFuelLevel() {
         return fuelLevel;
     }
 
-    private void setFuelLevel(int newFuelLevel) {
+    public void setFuelLevel(int newFuelLevel) {
         this.fuelLevel = newFuelLevel;
     }
 
-    private boolean getLightLover() {
+    public boolean getLightLover() {
         return this.lightLover;
     }
 }

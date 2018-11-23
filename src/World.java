@@ -1,5 +1,6 @@
 import com.sun.xml.internal.bind.v2.TODO;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class World {
     int width;
@@ -7,15 +8,17 @@ public class World {
     Block[] world;
     int lampAmount = 5;
     int fuelStationAmount = 3;
+    private int robotAmount = 5;
 
     public World(int width, int height) {
         this.width = width;
         this.height = height;
-        this.world = generate(width, height, this.lampAmount, this.fuelStationAmount);
+        this.world = generate(width, height, this.lampAmount, this.fuelStationAmount, this.robotAmount);
         this.calculateDistances();
+
     }
 
-    public Block[] generate(int width, int height, int lampAmount, int fuelStationAmount) {
+    public Block[] generate(int width, int height, int lampAmount, int fuelStationAmount, int robotAmount) {
         if (lampAmount + fuelStationAmount > width * height) {
 
         }
@@ -33,7 +36,13 @@ public class World {
         shuffleArray(w);
         return w;
     }
-    // TODO: Make populateWorld method. Creates said instances of the robot class.
+    public Robot[] populateWorld() {
+        Robot[] robotArr = new Robot[robotAmount];
+        for(int i = 0; i <= robotAmount; i++) {
+            robotArr[i] = new Robot();
+            return robotArr;
+        }
+    }
 
     private void shuffleArray(Block[] arr) {
         int m = arr.length;
@@ -109,6 +118,9 @@ public class World {
         coords[0] = i % this.width;
         coords[1] = i / this.width;
         return coords;
+    }
+    public int getRobotAmount() {
+        return robotAmount;
     }
 
 }
