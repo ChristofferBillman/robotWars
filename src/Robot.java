@@ -40,7 +40,7 @@ public class Robot {
 
             for(int i = 0; i <= 3; i++) {
                 if(light == lightLevelAt[i]) {
-                    switch(lightLevelAt[i + 1]) {
+                    switch(lightLevelAt[i] + 1) {
                         case 1: move(1,0);
                         case 2: move(-1, 0);
                         case 3: move(0,1);
@@ -63,9 +63,9 @@ public class Robot {
 
                 int maxFuel = Math.max(fuelLevelAt[0], Math.max(fuelLevelAt[1], Math.max(fuelLevelAt[2], fuelLevelAt[3])));
 
-            for(int i = 0; i <= 4; i++) {
+            for(int i = 0; i <= 3; i++) {
                 if(maxFuel == fuelLevelAt[i]) {
-                    switch(fuelLevelAt[i + 1]) {
+                    switch(fuelLevelAt[i] + 1) {
                         case 1: move(1,0);
                         case 2: move(-1, 0);
                         case 3: move(0,1);
